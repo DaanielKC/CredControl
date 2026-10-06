@@ -10,6 +10,7 @@ from Classes.GestaoLimiteController import GestaoLimiteController
 def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
 
+# Inicialização dos repositórios
 limiteRepository = LimiteRepository()
 historicoRepository = HistoricoAlteracaoRepository()
 
@@ -39,6 +40,7 @@ service = GestaoLimiteServiceImpl(limiteRepository, historicoRepository)
 
 controller = GestaoLimiteController(service)
 
+# Menu de opções
 clear()
 print("-------------------------")
 print("| DESBLOQUEIO DE LIMITE |")
